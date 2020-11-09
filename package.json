@@ -100,5 +100,6 @@
     }
   },
   "dependencies": {
+    "@ckeditor/ckeditor5-horizontal-line": "^19.0.0"
   }
 }

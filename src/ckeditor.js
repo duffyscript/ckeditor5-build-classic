@@ -32,6 +32,7 @@ import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar';
 import TextTransformation from '@ckeditor/ckeditor5-typing/src/texttransformation';
 import HorizontalLine from '@ckeditor/ckeditor5-horizontal-line/src/horizontalline';
 import InsertImage from './insert-image';
+import LinkImage from '@ckeditor/ckeditor5-link/src/linkimage';
 
 export default class ClassicEditor extends ClassicEditorBase {}
 
@@ -62,7 +63,8 @@ ClassicEditor.builtinPlugins = [
 	TableToolbar,
 	TextTransformation,
 	HorizontalLine,
-	InsertImage
+	InsertImage,
+	LinkImage
 ];
 
 // Editor configuration.
@@ -89,18 +91,10 @@ ClassicEditor.defaultConfig = {
 			'undo',
 			'redo',
 			'horizontalLine',
+			'|',
 			'insertImage'
 		]
 	},
-
-	/*	image: {
-		toolbar: [
-			'imageStyle:full',
-			'imageStyle:side',
-			'|',
-			'imageTextAlternative'
-		]
-	},*/
 	table: {
 		contentToolbar: [
 			'tableColumn',
@@ -111,3 +105,4 @@ ClassicEditor.defaultConfig = {
 	// This value must be kept in sync with the language defined in webpack.config.js.
 	language: 'en'
 };
+
